@@ -33,7 +33,10 @@ const Navbar = ({ click }) => {
           src="images/logo2.png"
         />
       </div>
-      <div style={{ color: "red" }}> {user ? <h1>{user.email}</h1> : null}</div>
+      <div style={{ color: "red" }}>
+        {" "}
+        {user ? <h1>{user.email || user.result.email}</h1> : null}
+      </div>
       <ul className="navbar__links">
         {user && (
           <li>
